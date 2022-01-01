@@ -5,7 +5,7 @@ import time
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from twilio.rest import Client
-
+import os
 def sendvineet():
     account_sid = 'ACdec1fc4ec94011e54ed96cbadceddef4' 
     auth_token = '611d6cc9e47471c342346247897b8de0' 
@@ -35,11 +35,11 @@ def sendvikram():
 class vfs:
     def __init__(self):
         self.url = "https://visa.vfsglobal.com/ind/en/pol/login"
-        Firefox_options = webdriver.FirefoxOptions()
+        Firefox_options = webdriver.FirefoxOptions(executable_path=os.environ.get("FIREFOX_BIN"))
         Firefox_options.add_argument("--headless")
         Firefox_options.add_argument("--disable-dev-shm-usage")
         Firefox_options.add_argument("--no-sandbox")
-        self.driver = driver = webdriver.Firefox(options=Firefox_options)
+        self.driver = driver = webdriver.Firefox(executable_path=os.environ.get("PATH"),options=Firefox_options)
     
     def sendvineet():
         account_sid = 'ACdec1fc4ec94011e54ed96cbadceddef4' 
