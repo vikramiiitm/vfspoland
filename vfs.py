@@ -35,11 +35,12 @@ def sendvikram():
 class vfs:
     def __init__(self):
         self.url = "https://visa.vfsglobal.com/ind/en/pol/login"
-        Firefox_options = webdriver.FirefoxOptions(executable_path=os.environ.get("FIREFOX_BIN"))
+        Firefox_options = webdriver.FirefoxOptions()
+        Firefox_options.binary_location = os.environ.get("FIREFOX_BIN")
         Firefox_options.add_argument("--headless")
         Firefox_options.add_argument("--disable-dev-shm-usage")
         Firefox_options.add_argument("--no-sandbox")
-        self.driver = driver = webdriver.Firefox(executable_path=os.environ.get("PATH"),options=Firefox_options)
+        self.driver = driver = webdriver.Firefox(executable_path=os.environ.get("GECKODRIVER_PATH"),options=Firefox_options)
     
     def sendvineet():
         account_sid = 'ACdec1fc4ec94011e54ed96cbadceddef4' 
@@ -69,6 +70,7 @@ class vfs:
     
     def login(self):
         self.driver.get(self.url)
+        print("Login Page Opened")
         options = Options()
         options.add_argument("--headless")
         
