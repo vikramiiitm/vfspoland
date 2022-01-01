@@ -116,6 +116,7 @@ class vfs:
         # applicatiopn
         
         self.driver.find_element(By.XPATH,'//*[@id="mat-select-value-1"]').click()
+        time.sleep(3)
         self.driver.find_element(By.XPATH,'/html/body/div[5]/div[2]/div/div/div/mat-option[9]/span').click()
 
         time.sleep(3)

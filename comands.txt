@@ -1,0 +1,52 @@
+  812  python vfs.py 
+  813  python3 vfs.py 
+  814  sudo apt-get install chromium-chromedriver
+  815  python3 vfs.py 
+  816  code ,
+  817  code .
+  818  python3 vfs.py 
+  819  pip install twilio
+  820  python3 vfs.py 
+  821  raise self.exception(method, uri, response, 'Unable to create record')
+  822  python3 vfs.py 
+  823  python3 -m virtualenv venv
+  824  source venv/bin/activate
+  825  pip install twilio
+  826  pip install -r requirements.txt 
+  827  python vfs.py 
+  828  pip freeze>requirements.txt
+  829  heroku git:remote -a vfsautomate
+  830  heroku login
+  831  git init
+  832  heroku git:remote -a vfsautomate
+  833  git add .
+  834  git commit -am "working" 
+  835  git push heroku master
+  836  git init
+  837  heroku git:remote -a vfsautomate
+  838  git add .
+  839  git commit -am "make it better"
+  840  git push heroku master
+  841  heroku run python vfs.py
+  842  git add .
+  843  git commit -am "make it better"
+  844  git push heroku master
+  845  heroku run python vfs.py
+  846  git add .
+  847  git commit -am "make it better"
+  848  git push heroku master
+  849  heroku run python vfs.py 
+  850  heroku --log
+  851  heroku run python vfs.py 
+  852  heroku stop
+  853  heroku run python vfs.py 
+  854  heroku ps
+  855  heroku run python vfs.py 
+  856  heroku ps
+  857  heroku ps:stop run.7042
+  858  heroku ps
+  859  heroku ps:restart
+  860  heroku run python vfs.py 
+  861  heroku ps:stop run.7042
+  862  heroku run python vfs.py 
+  863  history >comands.txt
