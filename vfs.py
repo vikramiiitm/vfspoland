@@ -6,6 +6,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from twilio.rest import Client
 import os
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 def sendvineet():
     account_sid = 'ACdec1fc4ec94011e54ed96cbadceddef4' 
     auth_token = '611d6cc9e47471c342346247897b8de0' 
@@ -40,7 +42,7 @@ class vfs:
         Firefox_options.add_argument("--headless")
         Firefox_options.add_argument("--disable-dev-shm-usage")
         Firefox_options.add_argument("--no-sandbox")
-        self.driver = driver = webdriver.Firefox(executable_path=os.environ.get("GECKODRIVER_PATH"),options=Firefox_options)
+        self.driver = webdriver.Firefox(executable_path=os.environ.get("GECKODRIVER_PATH"),options=Firefox_options)
     
     def sendvineet():
         account_sid = 'ACdec1fc4ec94011e54ed96cbadceddef4' 
