@@ -36,11 +36,11 @@ class vfs:
     def __init__(self):
         self.url = "https://visa.vfsglobal.com/ind/en/pol/login"
         Firefox_options = webdriver.FirefoxOptions()
-        Firefox_options.add_argument("--headless")
-        Firefox_options.add_argument("--disable-dev-shm-usage")
-        Firefox_options.add_argument("--no-sandbox")
-        self.driver = driver = webdriver.Firefox()
-    
+        # Firefox_options.add_argument("--headless")
+        # Firefox_options.add_argument("--disable-dev-shm-usage")
+        # Firefox_options.add_argument("--no-sandbox")
+        self.driver = driver = webdriver.Firefox(options=Firefox_options)
+        # self.driver.fullscreen_window()
     def sendvineet():
         account_sid = 'ACdec1fc4ec94011e54ed96cbadceddef4' 
         auth_token = '611d6cc9e47471c342346247897b8de0' 
@@ -89,6 +89,10 @@ class vfs:
                     login_css = "/html/body/app-root/div/app-login/section/div/div/mat-card/form/button"
                     login_element = self.driver.find_element(By.XPATH,login_css).is_displayed()
                     self.driver.find_element(By.XPATH,login_css).click()
+                    time.sleep(1)
+                    self.driver.find_element(By.XPATH,login_css).click()
+                    time.sleep(.2)
+                    self.driver.find_element(By.XPATH,login_css).click()
                     print("clicked login")
             except:
                 pass          
@@ -105,9 +109,10 @@ class vfs:
         self.driver.find_element(By.XPATH,'//*[@id="mat-select-value-1"]').click()
         self.driver.find_element(By.XPATH,'/html/body/div[5]/div[2]/div/div/div/mat-option[9]/span').click()
 
-        time.sleep(3)
+        
+        time.sleep(5)
         self.driver.find_element(By.XPATH,'//*[@id="mat-select-value-3"]').click()
-        time.sleep(3)
+        time.sleep(5)
         self.driver.find_element(By.XPATH,'/html/body/div[5]/div[2]/div/div/div/mat-option[1]/span').click()
         
         # time.sleep(2)
@@ -127,8 +132,8 @@ class vfs:
             pass
         print(status)
         if status != "No appointment slots are currently available":
-            # sendvikram()
-            # sendvineet()
+            sendvikram()
+            sendvineet()
             print("\nstatus : ",status," Msg sent")
         
         return status
@@ -138,6 +143,7 @@ class vfs:
             
 VFS = vfs()
 VFS.login()
+VFS.close()
 # vineet
 # 611d6cc9e47471c342346247897b8de0
 # vikram

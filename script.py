@@ -1,7 +1,10 @@
 import vfs
 import time
 while True:
-    VFS = vfs.vfs()
-    VFS.login()
-    # VFS.close()
+    try:
+        VFS = vfs.vfs()
+        VFS.login()
+        VFS.close()
+    except:
+        pass
     # time.sleep(120)
