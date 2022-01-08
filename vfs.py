@@ -39,7 +39,7 @@ class vfs:
         # Firefox_options.add_argument("--headless")
         # Firefox_options.add_argument("--disable-dev-shm-usage")
         # Firefox_options.add_argument("--no-sandbox")
-        self.driver = driver = webdriver.Firefox(options=Firefox_options)
+        self.driver = driver = webdriver.Firefox(options=Firefox_options,executable_path=r"C:/Users/VIKRAM/Downloads/geckodriver-v0.30.0-win64\geckodriver.exe")
         # self.driver.fullscreen_window()
     def sendvineet():
         account_sid = 'ACdec1fc4ec94011e54ed96cbadceddef4' 
@@ -107,8 +107,10 @@ class vfs:
         # applicatiopn
         
         self.driver.find_element(By.XPATH,'//*[@id="mat-select-value-1"]').click()
-        self.driver.find_element(By.XPATH,'/html/body/div[5]/div[2]/div/div/div/mat-option[9]/span').click()
-
+        time.sleep(3)
+        # /html/body/div[5]/div[2]/div/div/div/mat-option[9]/span
+        element = self.driver.find_element(By.XPATH,'/html/body/div[5]/div[2]/div/div/div/mat-option[9]/span')
+        self.driver.execute_script("arguments[0].click();",element)
         
         time.sleep(5)
         self.driver.find_element(By.XPATH,'//*[@id="mat-select-value-3"]').click()
@@ -148,3 +150,4 @@ VFS.close()
 # 611d6cc9e47471c342346247897b8de0
 # vikram
 # aac7afc7c6365baa82a09e4096cba53e
+# ot-sdk-eight ot-sdk-columns
